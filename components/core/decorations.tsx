@@ -4,7 +4,7 @@ export function VerticalScales({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "h-full w-10 border-x border-stone-200 bg-[repeating-linear-gradient(315deg,var(--pattern)_0,var(--pattern)_1px,transparent_1px,transparent_50%)] bg-size-[10px_10px] dark:border-stone-900 z-0",
+        "h-full w-10 border-x border-mist-200 bg-[repeating-linear-gradient(315deg,var(--pattern)_0,var(--pattern)_1px,transparent_1px,transparent_50%)] bg-size-[10px_10px] dark:border-mist-900 z-0",
         className
       )}
     />
@@ -14,7 +14,7 @@ export function HorizontalScales({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "h-10 w-full border-y border-stone-200 bg-[repeating-linear-gradient(315deg,var(--pattern)_0,var(--pattern)_1px,transparent_1px,transparent_50%)] bg-size-[10px_10px] dark:border-stone-900 z-0",
+        "h-10 w-full border-y border-mist-200 bg-[repeating-linear-gradient(315deg,var(--pattern)_0,var(--pattern)_1px,transparent_1px,transparent_50%)] bg-size-[10px_10px] dark:border-mist-900 z-0",
         className
       )}
     />
