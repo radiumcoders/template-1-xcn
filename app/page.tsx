@@ -1,19 +1,36 @@
-import { Button } from "@/components/ui/button"
+import Container from "@/components/core/Container"
+import {
+  FadingScales,
+  HeroDecoration,
+  HorizontalScales,
+  VerticalScales,
+} from "@/components/core/decorations"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <>
+      <Container className="relative flex h-screen items-center justify-center [--pattern:var(--color-stone-200)] dark:[--pattern:var(--color-stone-900)]">
+        <HorizontalScales className="absolute top-0 mx-auto w-screen" />
+        <HorizontalScales className="absolute bottom-0 mx-auto w-screen" />
+        <VerticalScales className="absolute left-0 mx-auto h-screen" />
+        <VerticalScales className="absolute right-0 mx-auto h-screen" />
+        <div className="size-full p-10">
+          <div className="relative size-full">
+            <FadingScales className="absolute inset-x-0 top-0" />
+            <HeroDecoration className="absolute inset-x-0 bottom-0" />
+          </div>
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
+      </Container>
+      {/*<Container className="relative flex h-screen items-center justify-center [--pattern:var(--color-stone-200)]">
+        <HorizontalScales className="absolute top-0 mx-auto w-screen" />
+        <HorizontalScales className="absolute bottom-0 mx-auto w-screen" />
+        <VerticalScales className="absolute left-0 mx-auto h-screen" />
+        <VerticalScales className="absolute right-0 mx-auto h-screen" />
+        <div className="size-full px-10 relative bg-red-500">
+
+          <FadingScales />
         </div>
-      </div>
-    </div>
+      </Container>*/}
+    </>
   )
 }
