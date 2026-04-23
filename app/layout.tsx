@@ -1,10 +1,14 @@
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono, Space_Grotesk, DM_Sans, Fira_Code } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
+const firaCodeFiraCode = Fira_Code({subsets:['cyrillic','cyrillic-ext','greek','greek-ext','latin','latin-ext','symbols2'],weight:['300','400','500','600','700'],variable:'--font-fira-code'});
+
+const dmSansDmSans = DM_Sans({subsets:['latin','latin-ext'],weight:['100','1000','200','300','400','500','600','700','800','900'],variable:'--font-dm-sans'});
+
+const spaceGroteskSpaceGrotesk = Space_Grotesk({subsets:['latin','latin-ext','vietnamese'],weight:['300','400','500','600','700'],variable:'--font-space-grotesk'});
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
@@ -20,7 +24,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
+      className={cn("antialiased", fontMono.variable, spaceGroteskSpaceGrotesk.variable, dmSansDmSans.variable, firaCodeFiraCode.variable)}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
