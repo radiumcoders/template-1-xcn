@@ -9,7 +9,7 @@ export default function Container({
 }) {
   return (
     <div
-      className={cn("mx-auto flex min-h-svh w-full max-w-6xl", className)}
+      className={cn("mx-auto flex h-fit w-full max-w-4xl", className)}
     >
       {children}
     </div>
